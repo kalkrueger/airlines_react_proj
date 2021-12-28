@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { useState } from "react";
+
 import './App.css';
 import Table from './components/Table'
 import DATA from './data.js'
@@ -23,7 +24,7 @@ const App = () => {
       </header>
       <section>
         < Table className="routes-table" columns={columns} rows=""
-          format={formatValue} routes={DATA.routes} />
+          format={formatValue} routes={DATA.routes} perPage={25}/>
       </section>
     </div>
   )
