@@ -24,8 +24,14 @@ const App = () => {
   const filteredRoutes = () => {
     let routes = DATA.routes
     if (defaultsSelected) return routes
-    if (airline !== 'all') routes = routes.filter(route => route.airline === Number(airline))
-    if (airport !== 'all') routes = routes.filter(route => [route.src, route.dest].includes(airport))
+
+    if (airline !== 'all') {
+      routes = routes.filter(route => route.airline === Number(airline))
+    }
+    if (airport !== 'all') {
+      routes = routes.filter(route => [route.src, route.dest].includes(airport))
+    }
+
     return routes
   }
 
